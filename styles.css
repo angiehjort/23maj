@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "Jorvik";
+  src: url("jorvik.woff2") format("woff2");
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #faf8f5;
+  --color-text: #3a3330;
+  --color-accent: #b08968;
+  --color-accent-light: #ddb892;
+  --color-divider: #ddd0c4;
+  --font-serif: "Jorvik", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Hero ---- */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.hero .names {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.hero .ampersand {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-accent);
+  margin: 0.2rem 0;
+}
+
+.hero .tagline {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #6b5e57;
+  font-style: italic;
+}
+
+/* ---- Sections ---- */
+.section {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.section + .section {
+  border-top: 1px solid var(--color-divider);
+}
+
+.section h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+}
+
+.section p,
+.section ul {
+  font-size: 1rem;
+}
+
+.section a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.section a:hover {
+  color: var(--color-text);
+}
+
+.coords {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #8a7d76;
+}
+
+/* ---- Map ---- */
+.map-wrapper {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2.5rem;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* ---- RSVP / Form ---- */
+.rsvp {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  border-top: 1px solid var(--color-divider);
+}
+
+.rsvp h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.rsvp .rsvp-note {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #6b5e57;
+}
+
+.rsvp iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+/* ---- Decorative divider ---- */
+.divider {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--color-accent-light);
+  letter-spacing: 0.5rem;
+}
+
+/* ---- Responsive ---- */
+@media (min-width: 600px) {
+  .hero .names {
+    font-size: 3.6rem;
+  }
+
+  .hero .ampersand {
+    font-size: 2rem;
+  }
+
+  .map-wrapper iframe {
+    height: 420px;
+  }
+}
