@@ -32,6 +32,48 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ---- Dress Code Ribbon ---- */
+@keyframes ribbon-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.dresscode-ribbon {
+  overflow: hidden;
+  height: 600px;
+  width: 100%;
+  cursor: grab;
+}
+
+.dresscode-ribbon:active {
+  cursor: grabbing;
+}
+
+.dresscode-track {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  width: max-content;
+  animation: ribbon-scroll 160s linear infinite;
+}
+
+.dresscode-track img {
+  height: 600px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 999px) {
+  .dresscode-ribbon {
+    height: 400px;
+  }
+  .dresscode-track img {
+    height: 400px;
+  }
+}
+
 /* ---- Hero ---- */
 .hero {
   text-align: center;
